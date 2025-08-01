@@ -83,14 +83,16 @@ export default function SignInScreen() {
           </View>
 
           <TouchableOpacity style={styles.forgotPassword}>
-            <Text
-              style={[
-                styles.forgotPasswordText,
-                isRTL && styles.forgotPasswordTextRTL,
-              ]}
-            >
-              {t("auth.forgot_password")}
-            </Text>
+            <Link href="/forgotPassword" asChild>
+              <Text
+                style={[
+                  styles.forgotPasswordText,
+                  isRTL && styles.forgotPasswordTextRTL,
+                ]}
+              >
+                {t("auth.forgot_password")}
+              </Text>
+            </Link>
           </TouchableOpacity>
 
           <TouchableOpacity
