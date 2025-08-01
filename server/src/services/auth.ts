@@ -119,10 +119,12 @@ export class AuthService {
     try {
       console.log("📧 EMAIL_USER:", process.env.EMAIL_USER);
       console.log(
+      )
       const transporter = nodemailer.createTransport({
         process.env.EMAIL_PASSWORD
           ? `✅ Loaded (${process.env.EMAIL_PASSWORD.length} chars)`
           : "❌ Missing"
+      }
       );
       console.log("🔑 EMAIL_PASSWORD value:", process.env.EMAIL_PASSWORD); // Temporary debug
       const nodemailer = require("nodemailer");
